@@ -18,8 +18,11 @@ var myLib = function() {
 	};	// end of chkPhnNum function
 	
 	// Check if String is an Email
-	var chkEmail = function() {
-		if(){
+	var chkEmail = function(email) {
+		var i = email.lastIndexOf(".")
+		var l = email.length
+		// console.log(t + " " + y);
+		if(l - i === 4){
 			return true;
 		} else {
 			return false;
@@ -29,11 +32,11 @@ var myLib = function() {
 	
 	// Check if String is has http:// or https://
 	var chkHttp = function() {
-		if(){
-			return true;
-		} else {
-			return false;
-		};
+		// if(){
+// 			return true;
+// 		} else {
+// 			return false;
+// 		};
 		
 	}; // end of chkHttp function
 	
@@ -52,24 +55,28 @@ var myLib = function() {
 	
 	}; // end of chkArrNum  function
 	
-	return{
-		"chkPhnNum": chkPhnNum
-		"chkEmail" : chkEmail,
-		"chkHttp"  : chkHttp,
-		"chkTiCase": chkCase,
-		"setDecPlc": chkDecPlc,
-		"chkArrNum": chkArrNum
-	};
+	return {
+		"chkPhnNum": chkPhnNum,
+		"chkEmail" : chkEmail
+//      "chkHttp"  : chkHttp,
+// 		"chkTiCase": chkCase,
+// 		"setDecPlc": chkDecPlc,
+// 		"chkArrNum": chkArrNum
+
+	} // end of key:value returns
 	
 }; // end of myLib
 
 // Start //
 
+// Global Variables
 var lib = myLib();
 
 console.log("Is this a phone number? " + lib.chkPhnNum("413-555-5555"));
+console.log("Is this an Email? " + lib.chkEmail("irosario@fullsail.edu"));
 console.log();
 console.log();
 console.log();
 console.log();
-console.log();
+
+// Finished //

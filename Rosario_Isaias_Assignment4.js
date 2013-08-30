@@ -40,7 +40,10 @@ var myLib = function() {
 	}; // end of chkHttp function
 	
 	// Check if String is Title Case
-	var chkTiCase = function() {
+	var chgNumStr = function(numStr,numStr1) {
+			
+		console.log("This should add up to a number. " + (Number(numStr) + numStr1));
+			
 	
 	}; // end of chkTiCase function
 	
@@ -57,8 +60,8 @@ var myLib = function() {
 	return {
 		"chkPhnNum": chkPhnNum,
 		"chkEmail" : chkEmail,
-        "chkHttp"  : chkHttp
-// 		"chkTiCase": chkTiCase,
+        "chkHttp"  : chkHttp,
+		"chgNumStr" : chgNumStr
 // 		"setDecPlc": chkDecPlc,
 // 		"chkArrNum": chkArrNum
 
@@ -74,7 +77,7 @@ var lib = myLib();
 console.log("Is this a phone number? " + lib.chkPhnNum("413-555-5555"));
 console.log("Is this an Email? " + lib.chkEmail("irosario@fullsail.edu"));
 console.log("Does it start with http:// or https://? " + lib.chkHttp("http://google.com"));
-console.log();
+lib.chgNumStr("30",20);
 console.log();
 console.log();
 

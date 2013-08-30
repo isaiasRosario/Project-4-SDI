@@ -21,7 +21,6 @@ var myLib = function() {
 	var chkEmail = function(email) {
 		var i = email.lastIndexOf(".")
 		var l = email.length
-		// console.log(t + " " + y);
 		if(l - i === 4){
 			return true;
 		} else {
@@ -31,12 +30,12 @@ var myLib = function() {
 	}; // end of chkEmail function
 	
 	// Check if String is has http:// or https://
-	var chkHttp = function() {
-		// if(){
-// 			return true;
-// 		} else {
-// 			return false;
-// 		};
+	var chkHttp = function(http) {
+		if(http.substring(0,7) === "http://" || http.substring(0,8) === "https://" ){
+			return true;
+		} else {
+			return false;
+		};
 		
 	}; // end of chkHttp function
 	
@@ -57,13 +56,13 @@ var myLib = function() {
 	
 	return {
 		"chkPhnNum": chkPhnNum,
-		"chkEmail" : chkEmail
-//      "chkHttp"  : chkHttp,
-// 		"chkTiCase": chkCase,
+		"chkEmail" : chkEmail,
+        "chkHttp"  : chkHttp
+// 		"chkTiCase": chkTiCase,
 // 		"setDecPlc": chkDecPlc,
 // 		"chkArrNum": chkArrNum
 
-	} // end of key:value returns
+	} // end of key:value return object
 	
 }; // end of myLib
 
@@ -74,7 +73,7 @@ var lib = myLib();
 
 console.log("Is this a phone number? " + lib.chkPhnNum("413-555-5555"));
 console.log("Is this an Email? " + lib.chkEmail("irosario@fullsail.edu"));
-console.log();
+console.log("Does it start with http:// or https://? " + lib.chkHttp("http://google.com"));
 console.log();
 console.log();
 console.log();

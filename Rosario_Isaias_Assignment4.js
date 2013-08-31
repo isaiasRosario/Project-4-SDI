@@ -48,7 +48,9 @@ var myLib = function() {
 	}; // end of chkTiCase function
 	
 	// Set Decimal Place for a Given Number
-	var setDecPlc = function() {
+	var setDecPlc = function(num,dec) {
+		d = num.toFixed(dec);
+		console.log("Set this number to " + dec + " decimal places. " + d);
 	
 	}; // end of setDecPlc function
 	
@@ -61,9 +63,9 @@ var myLib = function() {
 		"chkPhnNum": chkPhnNum,
 		"chkEmail" : chkEmail,
         "chkHttp"  : chkHttp,
-		"chgNumStr" : chgNumStr
-// 		"setDecPlc": chkDecPlc,
-// 		"chkArrNum": chkArrNum
+		"chgNumStr" : chgNumStr,
+		"setDecPlc": setDecPlc,
+ 		"chkArrNum": chkArrNum
 
 	} // end of key:value return object
 	
@@ -78,7 +80,7 @@ console.log("Is this a phone number? " + lib.chkPhnNum("413-555-5555"));
 console.log("Is this an Email? " + lib.chkEmail("irosario@fullsail.edu"));
 console.log("Does it start with http:// or https://? " + lib.chkHttp("http://google.com"));
 lib.chgNumStr("30",20);
-console.log();
+lib.setDecPlc(3.14159,3);
 console.log();
 
 // Finished //

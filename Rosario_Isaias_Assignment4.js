@@ -55,8 +55,14 @@ var myLib = function() {
 	}; // end of setDecPlc function
 	
 	// Check for Smallest Number in Array greater then Given Number 
-	var chkArrNum = function() {
-	
+	var chkArrNum = function(arr,num) {
+		for(var i = 0; i < arr.length; i++){
+			if(arr[i] < num){
+				
+			} else {
+				console.log("The closest greater number is. " + arr[i]);
+			};
+		};
 	}; // end of chkArrNum  function
 	
 	return {
@@ -81,6 +87,6 @@ console.log("Is this an Email? " + lib.chkEmail("irosario@fullsail.edu"));
 console.log("Does it start with http:// or https://? " + lib.chkHttp("http://google.com"));
 lib.chgNumStr("30",20);
 lib.setDecPlc(3.14159,3);
-console.log();
+lib.chkArrNum([2,4,6,8,10],9);
 
 // Finished //
